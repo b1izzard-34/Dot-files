@@ -1,6 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"									Vundle Plugins		       	      		         "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""Vundle Plugins
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -31,9 +29,7 @@ Plugin 'valloric/youcompleteme'				" YCM
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"					   			 Other Configs                                       "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Other Configs
 " BASIC
 "
 " Tab width 4
@@ -78,9 +74,7 @@ vnoremap <Up> <Nop>
 " Encoding
 set encoding=utf-8
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"					   			      Plugins                                        "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Plugins
  
 " PLUGINS
 " CURSORLINE
