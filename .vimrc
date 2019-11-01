@@ -7,23 +7,32 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'				" VUNDLE
+" VUNDLE
+Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'CursorLineCurrentWindow'			" CURSORLINE
+" CURSORLINE
+Plugin 'CursorLineCurrentWindow'
 
-Plugin 'yggdroot/indentline'				" INDENTLINE	
+" INDENTLINE
+Plugin 'yggdroot/indentline'	
 
-Plugin 'scrooloose/nerdtree'				" NERDTREE
+" NERDTREE
+Plugin 'scrooloose/nerdtree'
 
-Plugin 'nlknguyen/papercolor-theme'			" PAPERCOLOR
+" PAPERCOLOR
+Plugin 'nlknguyen/papercolor-theme'
 
-Plugin 'jiangmiao/auto-pairs'				" AUTOPAIR
+" AUTOPAIR
+Plugin 'jiangmiao/auto-pairs'
 
-Plugin 'itchyny/lightline.vim'				" LIGHTLINE
+" LIGHTLINE
+Plugin 'itchyny/lightline.vim'
 
-Plugin 'ryanoasis/vim-devicons'				" DEVICONS
+" DEVICONS
+Plugin 'ryanoasis/vim-devicons'
 
-Plugin 'valloric/youcompleteme'				" YCM
+" YCM
+Plugin 'valloric/youcompleteme'
 
 " PLUGINS
 call vundle#end()            " required
