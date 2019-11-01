@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"					Vundle Plugins		       	      		       "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"									Vundle Plugins		       	      		         "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -9,38 +9,30 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'				" VUNDLE
 
-"Plugin 'henrynewcomer/vim-theme-papaya'	" PAPAYA BLUE COLORSCHEME
+Plugin 'CursorLineCurrentWindow'			" CURSORLINE
 
-Plugin 'CursorLineCurrentWindow'	" CURSORLINE
+Plugin 'yggdroot/indentline'				" INDENTLINE	
 
-Plugin 'yggdroot/indentline'		" INDENT LINE	
+Plugin 'scrooloose/nerdtree'				" NERDTREE
 
-Plugin 'scrooloose/nerdtree'		" NERD TREE
+Plugin 'nlknguyen/papercolor-theme'			" PAPERCOLOR
 
-"Plugin 'raimondi/delimitmate'		" AUTO BRACKETS
+Plugin 'jiangmiao/auto-pairs'				" AUTOPAIR
 
-Plugin 'kien/rainbow_parentheses.vim'	" RAINBOW PARANTHESES
+Plugin 'itchyny/lightline.vim'				" LIGHTLINE
 
-"Plugin 'tpope/vim-surround'			" SURROUND
+Plugin 'ryanoasis/vim-devicons'				" DEVICONS
 
-Plugin 'nlknguyen/papercolor-theme'	" PAPER COLOR
-
-Plugin 'itchyny/lightline.vim'
-
-"Plugin 'scrooloose/syntastic'		" SYNTASTIC
-
-Plugin 'ryanoasis/vim-devicons'
-
-Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'				" YCM
 
 " PLUGINS
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"					   Other Configs                                       "
+"					   			 Other Configs                                       "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC
 "
@@ -57,21 +49,9 @@ set number
 set hlsearch
 
 " Highlight matching paretheses
-set showmatch
+"set showmatch
 
 set encoding=UTF-8
-
-" PAPAYA BLUE COLORSCHEME
-"colorscheme papaya
-"let g:papaya_gui_color='blue'
-"
-" PAPER COLOR
-set background=dark
-colorscheme PaperColor
-
-" CURSORLINE
-" Highlight the current line
-set cursorline
 
 " Diabling the arrow keys in vim
 " Remove newbie crutches in Command Mode
@@ -98,11 +78,20 @@ vnoremap <Up> <Nop>
 " Encoding
 set encoding=utf-8
 
-" INDENT LINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"					   			      Plugins                                        "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ 
+" PLUGINS
+" CURSORLINE
+" Highlight the current line
+set cursorline
+
+" INDENTLINE
 "let g:indentLine_setColors = 0
 let g:indentLine_char = '¦'
 
-" NERD TREE
+" NERDTREE
 " Open nerd tree automatically when no file is open
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -111,18 +100,19 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim when only window open is nerd tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" AUTO BRACKETS
-" 
+" PAPERCOLOR
+set background=dark
+colorscheme PaperColor
 
-" RAINBOW PARANTHESES
-" Always on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
+" AUTOPAIR
+"
 " LIGHTLINE
 " Show lightline always
 set laststatus=2
 " Change the colorscheme
 let g:lightline = {'colorscheme': 'one',}
+
+" DEVICONS
+"
+" YCM
+"
