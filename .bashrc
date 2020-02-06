@@ -1,6 +1,8 @@
 #
 # ~/.bashrc
 #
+complete -c man which
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -64,6 +66,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
+alias get-music='youtube-dl --extract-audio --audio-format mp3'
 
 # Creates an archive (*.tar.gz) from given directory.
 function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
@@ -127,7 +130,7 @@ mcd () {
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-export PS1="\[\033[38;5;12m\]\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;12m\]@\[$(tput sgr0)\]\[\033[38;5;7m\]\h\[$(tput sgr0)\]\[\033[38;5;12m\]\[$(tput sgr0)\]\[\033[38;5;15m\]: \[$(tput sgr0)\]\[\033[38;5;7m\]\w :\[$(tput sgr0)\]\[\033[38;5;10m\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\n~> "
+export PS1="\[\033[38;5;12m\]\][٨]\[$(tput sgr0)\] \[\033[38;5;12m\]\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;12m\]@\[$(tput sgr0)\]\[\033[38;5;7m\]\h \[$(tput sgr0)\]\[\033[38;5;12m\]\[$(tput sgr0)\]\[\033[38;5;15m\]: \[$(tput sgr0)\]\[\033[38;5;7m\]\w :\[$(tput sgr0)\]\[\033[38;5;10m\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\n "
 
 [ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
