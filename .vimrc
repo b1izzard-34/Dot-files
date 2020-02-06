@@ -1,42 +1,33 @@
 ""Vundle Plugins
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" VUNDLE
-Plugin 'VundleVim/Vundle.vim'
-
-" CURSORLINE
-Plugin 'CursorLineCurrentWindow'
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
 
 " INDENTLINE
-Plugin 'yggdroot/indentline'	
+Plug 'yggdroot/indentline'	
 
 " NERDTREE
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " PAPERCOLOR
-Plugin 'nlknguyen/papercolor-theme'
+Plug 'nlknguyen/papercolor-theme'
 
 " AUTOPAIR
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " LIGHTLINE
-Plugin 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 
 " DEVICONS
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " YCM
-Plugin 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 
 " PLUGINS
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Initialize plugin system
+call plug#end()
 
 "" Other Configs
 " BASIC
@@ -86,7 +77,6 @@ set encoding=utf-8
 "" Plugins
  
 " PLUGINS
-" CURSORLINE
 " Highlight the current line
 set cursorline
 
