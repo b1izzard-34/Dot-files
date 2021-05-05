@@ -2,7 +2,7 @@
 
 set nocompatible              " be iMproved, required
 " Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
 " INDENTLINE
 Plug 'yggdroot/indentline'	
